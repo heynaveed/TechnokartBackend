@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { Authentication } = require("../Middleware/Authentication");
 const { PartnerModel } = require("../Model/Partner_models");
 
 const SuperAdmin = Router();
@@ -10,7 +11,7 @@ SuperAdmin.get("/", async (req, res) => {
 })
 
 // POST REQUEST FOR NEW PARTNER
-SuperAdmin.post("/", async (req, res) => {
+SuperAdmin.post("/",Authentication, async (req, res) => {
     const { Partner_name, Partner_email } = req.body;
     const Data = new PartnerModel({
         Partner_name: Partner_name,

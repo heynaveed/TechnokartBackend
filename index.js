@@ -18,7 +18,7 @@ app.use("/superadminlogin",SuperAdminLogin); //SUPERADMIN LOGIN END POINT.
 
 app.use("/partnerlogin",PartnerLogin); //PARTNER LOGIN END POINT WITH OTP VERIFICATION.
 
-app.use("/superadmin", Authentication,SuperAdmin); //SUPERADMIN CRUD OPERATION ON PARTNERS.
+app.use("/superadmin",SuperAdmin); //SUPERADMIN CRUD OPERATION ON PARTNERS.
 
 app.use("/addevent",Authentication,PartnerEvent); //PARTNER POSTING EVENTS END POINT.
 
